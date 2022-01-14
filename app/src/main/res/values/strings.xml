@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">BStatus</string>
     <string name="default_notification_channel_id" />
+    <string name="this_is_recieved_message">This is recieved message</string>
+    <string name="this_is_sent_message">This is sent message</string>
 </resources>

@@ -3,6 +3,7 @@
     package="com.example.bstatus">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,20 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BStatus">
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat_ic_notification" />
-        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
-             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/design_default_color_error" />
-        <!-- [END fcm_default_icon] -->
+            android:resource="@color/design_default_color_error" /> <!-- [END fcm_default_icon] -->
         <!-- [START fcm_default_channel] -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="@string/default_notification_channel_id" />
-        <!-- [END fcm_default_channel] -->
+            android:value="@string/default_notification_channel_id" /> <!-- [END fcm_default_channel] -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -33,20 +38,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <activity
-        android:name=".MainActivity"
-        android:exported="true"
-        android:label="@string/app_name">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"></activity>
 
-    </activity>
-    <service
-        android:name=".MyFirebaseMessagingService"
-        android:exported="false">
-        android:directBootAware="true">
-        <intent-filter>
-            <action android:name="com.google.firebase.MESSAGING_EVENT" />
-        </intent-filter>
-    </service>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"
+            android:label="BStatus"></activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
