@@ -82,4 +82,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_password" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="184dp"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/icon"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="625dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
